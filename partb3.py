@@ -9,12 +9,12 @@ def b_search(keyword, txt):
         for word in line.split():
             words.append(word)
     print(txt)
-    """for i in words:
+    for i in words:
         if keyword == i:
             print(words)
             return True
     print(words)
-    return False"""
+    return False
 
 root_book = []
 for r,dirs,files in os.walk('/cricket'):
