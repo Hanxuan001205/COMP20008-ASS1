@@ -20,21 +20,19 @@ def  llegal_text(words):
         i = "".join(i)
         text = text + i + ' '
     return text
-
-def alter(file,old_str,new_str):
-  with open(file, "r", encoding="utf-8") as f1,open("%s.bak" % file, "w", encoding="utf-8") as f2:
-    for line in f1:
-      if old_str in line:
-        line = line.replace(old_str, new_str)
-      f2.write(line)
-  os.remove(file)
-  os.rename("%s.bak" % file, file)
-
 root_book = []
-for r,dirs,files in os.walk('../pythonProject3/cricket'):
+d = {}
+for r,dirs,files in os.walk('cricket'):
     for file in files:
         f = os.path.join(r,file)
         root_book.append(f)
 for root in root_book:
+    basename = os.path.basename(root)
     txt = open(root)
-    llegal_text(get_words(txt))
+    new = llegal_text(get_words(txt))
+    d[basename] = new
+keys = []
+for i in d.keys():
+    keys.append(i)
+for i in range(len(root_book)-1):
+    new = d[keys[i]]
