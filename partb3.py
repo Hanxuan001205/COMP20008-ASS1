@@ -1,8 +1,9 @@
 import os
 import re
+import sys
 from partb2 import get_words, llegal_text
 return_root = []
-key_words_set  = [input('keyword1: ')]
+key_words_set  = sys.argv[:]
 def b_search(keyword, txt):
     words = []
     for line in txt.readlines():
@@ -44,7 +45,3 @@ for root in return_root:
     if re.findall(r'[A-Z]{4}-\d{3}[A-Z]', txt):
         print(first_line)
         print(re.findall(r'[A-Z]{4}-\d{3}[A-Z]', txt))
-
-
-
-
