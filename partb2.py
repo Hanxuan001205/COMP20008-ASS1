@@ -20,7 +20,7 @@ def  llegal_text(words):
         i = "".join(i)
         text = text + i + ' '
     return text
-import os
+
 def alter(file,old_str,new_str):
   with open(file, "r", encoding="utf-8") as f1,open("%s.bak" % file, "w", encoding="utf-8") as f2:
     for line in f1:

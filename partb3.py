@@ -1,6 +1,6 @@
 import os
 import re
-from main import get_words, llegal_text
+from partb2 import get_words, llegal_text
 return_root = []
 key_words_set  = [input('keyword1: ')]
 def b_search(keyword, txt):
