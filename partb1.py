@@ -4,7 +4,7 @@ import pandas as pd
 root_book = []
 title_list = []
 id_list = []
-for r,dirs,files in os.walk('../pythonProject3/cricket'):
+for r,dirs,files in os.walk('cricket'):
     for file in files:
         f = os.path.join(r,file)
         root_book.append(f)
